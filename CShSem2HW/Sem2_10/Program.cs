@@ -4,3 +4,21 @@
 // 782 -> 8
 // 918 -> 1
 
+Console.WriteLine("Введите трехзначное число");
+int a = Convert.ToInt32(Console.ReadLine());
+
+if (a > 99 && a < 1000)
+{
+    int res = (a % 100) / 10;
+    Console.WriteLine($"{res} является второй цифрой числа {a}");
+}
+else if (a < 0)
+{
+    a = a * (-1);
+    int res = (a % 100) / 10;
+    Console.WriteLine($"{res} является второй цифрой числа -{a}");
+}
+else
+{
+    Console.WriteLine("Введено некорректное число");
+}
