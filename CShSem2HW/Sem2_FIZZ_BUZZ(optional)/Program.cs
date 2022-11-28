@@ -4,3 +4,16 @@
 //то программа должна выводить слово FizzBuzz. 
 //Задача может показаться очевидной, но нужно получить наиболее простое и красивое решение.
 
+void CheckFizzBuzz(int a)
+{
+    for (a = 1; a <= 10; a++)
+    {
+        switch (a)
+        {
+            case (a % 3 == 0): Console.Write("Fizz");
+            case (a % 5 == 0): Console.Write("Buzz");
+            default: Console.Write($"{a} ");
+        }
+    }
+}
+FindFizzBuzz(a);
