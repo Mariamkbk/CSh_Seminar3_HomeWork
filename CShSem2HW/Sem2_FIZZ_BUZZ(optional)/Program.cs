@@ -4,24 +4,25 @@
 //то программа должна выводить слово FizzBuzz. 
 //Задача может показаться очевидной, но нужно получить наиболее простое и красивое решение.
 
-string DoFizzBuzz(int x, int b, int c)
+int a;
+int b;
+int c;
+for (a = 1; a <= 100; a++)
 {
-    for (x = 1; x <= 10; x++)
+    b = a % 3; c = a % 5;
+    switch ((b, c))
     {
-        b = x % 3;
-        c = x % 5;
-        switch (b)
-        {
-            case 0: Console.Write("Fizz");
-            default:;
-        }
-        switch (c)
-        {
-            case 0: Console.Write($"Buzz ");
-            goto default;
-            default: return (x);
-        }
+        case (0, 0):
+            Console.Write("FizzBuzz, ");
+            break;
+        case (0, > 0):
+            Console.Write("Fizz, ");
+            break;
+        case ( > 0, 0):
+            Console.Write("Buzz, ");
+            break;
+        default:
+            Console.Write($"{a}, ");
+            break;
     }
 }
-
-DoFizzBuzz(x, b, c);
