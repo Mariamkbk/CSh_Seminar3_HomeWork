@@ -20,5 +20,5 @@ Console.WriteLine("Введите координаты z1: ");
 double z1 = Convert.ToDouble(Console.ReadLine());  
 Console.WriteLine("Введите координаты z2: ");    
 double z2 = Convert.ToDouble(Console.ReadLine()); 
-Console.WriteLine(FindDistance (distance)); 
+Console.WriteLine(FindDistance (x1,x2,y1,y2,z1,z2)); 
 }
