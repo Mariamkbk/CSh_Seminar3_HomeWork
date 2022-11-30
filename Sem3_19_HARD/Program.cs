@@ -9,26 +9,23 @@ try
     int mult = DigNum;
     int LastMult = 1;
     int divider = 1;
-    int FirstNum = 1;
-    int LastNum = 1;
-    while (mult > (DigNum / 2))
+    for (int LastNum = 1, FirstNum=1; mult > (DigNum / 2); mult--, LastMult++)
     {
-        if (FirstNum == LastNum)
+        if (LastNum == FirstNum)
         {
             FirstNum = (Convert.ToInt32(num / (Math.Pow(10, (mult))))) % 10;
             LastNum = (num % divider) % 10;
-            mult--;
-            LastMult++;
             divider = Convert.ToInt32(Math.Pow(10, LastMult));
+            break;
         }
         else
         {
             Console.WriteLine($"Число {num} не является палиндромом");
         }
     }
-    if (mult<=Dignum)
+    if (mult <= DigNum)
     {
-       Console.WriteLine($"Число {num} является палиндромом"); 
+        Console.WriteLine($"Число {num} является палиндромом");
     }
 }
 catch
