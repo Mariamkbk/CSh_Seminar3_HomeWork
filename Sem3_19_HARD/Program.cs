@@ -18,12 +18,15 @@ try
             divider = Convert.ToInt32(Math.Pow(10, LastMult));
 
         }
-        else if (LastNum != FirstNum)
+    }
+    if (LastNum > FirstNum && LastNum < FirstNum)
         {
             Console.WriteLine($"Число {num} не является палиндромом");
         }
-    }
-    Console.WriteLine($"Число {num} является палиндромом");
+        else
+        {
+            Console.WriteLine($"Число {num} является палиндромом");
+        }
 }
 catch
 {
