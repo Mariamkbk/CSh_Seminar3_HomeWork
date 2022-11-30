@@ -1,5 +1,4 @@
-﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом. 
-// Через строку решать нельзя.
+﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом. Через строку решать нельзя.
 // 14212 -> нет
 // 12821 -> да
 // 23432 -> да
@@ -7,18 +6,23 @@
 try
 {
     Console.WriteLine("Введите пятизначное число");
-int num = Convert.ToInt32(Console.ReadLine());
-if (num > 9999 && num < 100000 || num < -9999 && num > -100000)
-{
-    int FirstNum = num / 10000;
-    int LastNum = num % 10;
-    if (FirstNum == LastNum)
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (num > 9999 && num < 100000 || num < -9999 && num > -100000)
     {
-        FirstNum = (num / 1000) % 10;
-        LastNum = (num / 10) % 10;
+        int FirstNum = num / 10000;
+        int LastNum = num % 10;
         if (FirstNum == LastNum)
         {
-            Console.WriteLine($"Число {num} является палиндромом");
+            FirstNum = (num / 1000) % 10;
+            LastNum = (num / 10) % 10;
+            if (FirstNum == LastNum)
+            {
+                Console.WriteLine($"Число {num} является палиндромом");
+            }
+            else
+            {
+                Console.WriteLine($"Число {num} не является палиндромом");
+            }
         }
         else
         {
@@ -27,13 +31,8 @@ if (num > 9999 && num < 100000 || num < -9999 && num > -100000)
     }
     else
     {
-        Console.WriteLine($"Число {num} не является палиндромом");
+        Console.WriteLine($"Число {num} не является пятизначным");
     }
-}
-else
-{
-    Console.WriteLine($"Число {num} не является пятизначным");
-}
 }
 catch
 {
